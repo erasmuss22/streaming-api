@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/erasmuss22/streaming-api/issues"
   },
-  "homepage": "https://github.com/erasmuss22/streaming-api#readme"
+  "homepage": "https://github.com/erasmuss22/streaming-api#readme",
+  "dependencies": {
+    "jsforce": "^1.8.4"
+  }
 }
