@@ -1,0 +1,24 @@
+{
+  "name": "streaming-api",
+  "version": "1.0.0",
+  "description": "Demonstration of client subscribed to Salesforce Streaming API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erasmuss22/streaming-api.git"
+  },
+  "keywords": [
+    "Salesforce",
+    "Streaming",
+    "API"
+  ],
+  "author": "Erin Rasmussen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erasmuss22/streaming-api/issues"
+  },
+  "homepage": "https://github.com/erasmuss22/streaming-api#readme"
+}
