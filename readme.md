@@ -1,7 +1,7 @@
 ## How to use this repo
 - Clone this repo to your local machine
 - Do `npm install`
-- Create `.env` file with the following information:
+- Create `.env` file in the main folder with the following information:
   ```
   USERNAME=<Salesforce username>
   PASSWORd=<Salesforce user password>
