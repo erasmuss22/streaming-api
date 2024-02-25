@@ -1,10 +1,14 @@
 const jsforce = require('jsforce');
+require("dotenv").config({ path: "./.env" });
 
-const username = 'YOUR_API_USERNAME';
-const password = 'YOUR_PASSWORD';
-const securityToken = 'YOUR_SECURITY_TOKEN';
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
+const securityToken = process.env.SECURITY_TOKEN;
+const LOGIN_URL = process.env.LOGIN_URL;
+const TOPIC = process.env.TOPIC;
 
-const conn = new jsforce.Connection();
+
+const conn = new jsforce.Connection({loginUrl : LOGIN_URL});
 conn.login(username, password + securityToken, function(err, res) {
   if (err) { 
       return console.error(err);
@@ -12,7 +16,7 @@ conn.login(username, password + securityToken, function(err, res) {
 
   console.log('Authenticated');
   
-  conn.streaming.topic("NewAccounts").subscribe(function(message) {
+  conn.streaming.topic(TOPIC).subscribe(function(message) {
     console.log('Event Type : ' + message.event.type);
     console.log('Event Created : ' + message.event.createdDate);
     console.log('Object Id : ' + message.sobject.Id);
